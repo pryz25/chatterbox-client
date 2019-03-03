@@ -2,10 +2,12 @@ var FormView = {
 
   $form: $('form'),
   $addRoom: $('.addRoom'),
+  $username: $('.username'),
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit),
     FormView.$addRoom.on('click', FormView.roomSubmit)
+    FormView.$username.on('click', MessagesView.addFriends)
   },
 
   handleSubmit: function(event) {
