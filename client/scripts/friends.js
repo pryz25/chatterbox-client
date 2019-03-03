@@ -1,6 +1,6 @@
 var Friends = {
   storage: [],
 
-  toggleStatus: function() {}
+  // toggleStatus: function() {}
 
 };
