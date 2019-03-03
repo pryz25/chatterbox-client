@@ -9,6 +9,14 @@ var Messages = {
         RoomsView.renderRoom(i.roomname);
       }
     }
+  },
+
+  roomMessages : function (arrOfObj, selectRoom) {
+    for (let k of arrOfObj) {
+      if (k.roomname === selectRoom) {
+        MessagesView.renderMessage(k);
+      }
+    }
   }
 
   // accepts array of objects

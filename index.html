@@ -27,8 +27,9 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
-        <button>Add Room</button>
+        <select id='roomSelect' onChange='RoomsView.selectFunction()'></select>
+        <button type='button' class='addRoom'>Add Room</button>
+        <input class='addRoomText'>
         <button type ="refresh" class="refresh"> Refresh! </button>
       </div>
       <form action="#" id="send" method="post">

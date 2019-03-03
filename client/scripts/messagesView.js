@@ -1,6 +1,7 @@
 var MessagesView = {
 
   $chats: $('#chats'),
+  $username: $('.username'),
 
   initialize: function() {
     Parse.readAll((data) => { // call parse to pull messages
@@ -8,14 +9,20 @@ var MessagesView = {
         Messages.storage = data[key];
         Messages.eachMessages(data[key]); // storage is server message array
       }
-    });
-
+    }),
+    MessagesView.$username.on('click', MessagesView.addFriends)
   },
 
   renderMessage: function(message) {
     var h = MessageView.render(message);
     MessagesView.$chats.append(h);
-  }
+  },
   
+  addFriends: function (event) {
+    console.log('click');
+    $('.username').addClass('username friends');
+    Friends.storage.push($('.friends').value);
+    
+  }
   
 };
